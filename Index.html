@@ -3,90 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advisit Digital | Freelance Digital Marketer</title>
+  <title>AdVisit | Digital Marketing Experts</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-  </style>
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GA_TRACKING_ID');
+  </script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
 
-  <!-- Header with Logo -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
+  <!-- Navbar with Logo -->
+  <header class="bg-white dark:bg-gray-800 shadow">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-4">
-        <img src="logo.png" alt="Advisit Logo" class="h-12 w-12 rounded-full shadow" />
-        <h1 class="text-xl font-bold">Advisit<span class="text-blue-500"> Digital Marketing</span></h1>
+      <div class="flex items-center space-x-2">
+        <!-- Logo: Replace src with your actual logo path -->
+        <img src="logo.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/40'" alt="AdVisit Logo" class="h-10 w-10 rounded-full">
+        <h1 class="text-xl font-bold">Ad<span class="text-blue-500">Visit</span></h1>
       </div>
-      <nav class="space-x-6 text-sm md:text-base">
-        <a href="#services" class="text-gray-600 hover:text-blue-500">Services</a>
-        <a href="#portfolio" class="text-gray-600 hover:text-blue-500">Portfolio</a>
-        <a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a>
+      <nav class="space-x-4">
+        <a href="#services" class="hover:text-blue-500">Services</a>
+        <a href="#portfolio" class="hover:text-blue-500">Portfolio</a>
+        <a href="#pricing" class="hover:text-blue-500">Pricing</a>
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+        <button onclick="toggleDarkMode()" class="ml-2 px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded">🌓</button>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="text-center py-20 bg-blue-50">
-    <h2 class="text-4xl font-bold mb-4">Boost Your Brand with Expert Digital Marketing</h2>
-    <p class="mb-6 text-lg text-gray-700">I help businesses grow through SEO, Social Media & Ads</p>
-    <a href="#contact" class="inline-block px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Work With Me</a>
+  <section class="text-center py-20 bg-blue-50 dark:bg-blue-900">
+    <h2 class="text-4xl font-bold mb-4">Grow Your Business Online</h2>
+    <p class="mb-6 text-lg">We help small businesses scale through social media, SEO, and paid ads.</p>
+    <a href="#contact" class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600">Get Free Consultation</a>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-16 max-w-5xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-12 text-center">My Services</h3>
+  <section id="services" class="py-16 max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-8 text-center">Our Services</h3>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-bold mb-2">Social Media Management</h4>
-        <p>Grow your presence and engagement across platforms like Instagram, Facebook, and LinkedIn.</p>
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">Social Media Marketing</h4>
+        <p>Organic & paid strategies to grow on Instagram, Facebook, and LinkedIn.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-bold mb-2">SEO Optimization</h4>
-        <p>Improve your Google ranking and drive organic traffic to your website.</p>
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">SEO & Local SEO</h4>
+        <p>Rank higher in Google searches with technical and content optimization.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-bold mb-2">Paid Advertising</h4>
-        <p>Run targeted ads on Google, Meta, and other platforms to convert leads.</p>
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">Ad Campaigns</h4>
+        <p>Google Ads, Meta Ads & retargeting to bring results and traffic fast.</p>
       </div>
     </div>
   </section>
 
   <!-- Portfolio -->
-  <section id="portfolio" class="py-16 bg-gray-50 max-w-5xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-12 text-center">Recent Projects</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-4 shadow rounded hover:shadow-lg transition">
-        <img src="https://via.placeholder.com/400x200" alt="Project 1" class="mb-3 rounded">
-        <h4 class="font-bold">Bakery Instagram Campaign</h4>
-        <p class="text-sm text-gray-600">Increased followers by 200% in 2 months.</p>
-      </div>
-      <div class="bg-white p-4 shadow rounded hover:shadow-lg transition">
-        <img src="https://via.placeholder.com/400x200" alt="Project 2" class="mb-3 rounded">
-        <h4 class="font-bold">E-commerce SEO Audit</h4>
-        <p class="text-sm text-gray-600">Boosted traffic by 40% organically.</p>
+  <section id="portfolio" class="py-16 bg-gray-100 dark:bg-gray-800">
+    <div class="max-w-5xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-8 text-center">Our Projects</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 shadow rounded dark:bg-gray-700">
+          <img src="https://via.placeholder.com/400x200" class="mb-3 rounded" alt="Project">
+          <h4 class="font-bold">Instagram Growth for Bakery</h4>
+          <p class="text-sm">Increased followers by 200% and sales by 30% in 60 days.</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded dark:bg-gray-700">
+          <img src="https://via.placeholder.com/400x200" class="mb-3 rounded" alt="Project">
+          <h4 class="font-bold">SEO for E-commerce</h4>
+          <p class="text-sm">Boosted organic traffic by 40% and ranked on first page.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 max-w-3xl mx-auto px-4 bg-white rounded shadow">
-    <h3 class="text-3xl font-bold mb-6 text-center">Get In Touch</h3>
-    <div class="w-full overflow-hidden">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-ly6GJrfDjhKB7u3COaPObMWx6xbsXyjiXgcGbqVNYYjzug/viewform?embedded=true" 
-        width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" class="w-full rounded">Loading…</iframe>
+  <!-- Pricing -->
+  <section id="pricing" class="py-16 max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-8 text-center">Pricing</h3>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">Starter</h4>
+        <p class="text-2xl font-bold mb-4">₹2,999/mo</p>
+        <ul class="space-y-2 text-sm">
+          <li>✓ 3 posts/week</li>
+          <li>✓ 1 ad campaign</li>
+          <li>✓ Monthly report</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">Growth</h4>
+        <p class="text-2xl font-bold mb-4">₹6,999/mo</p>
+        <ul class="space-y-2 text-sm">
+          <li>✓ 5 posts/week</li>
+          <li>✓ 2 ad campaigns</li>
+          <li>✓ SEO audit</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">Pro</h4>
+        <p class="text-2xl font-bold mb-4">₹11,999/mo</p>
+        <ul class="space-y-2 text-sm">
+          <li>✓ Everything in Growth</li>
+          <li>✓ Website + Email Marketing</li>
+          <li>✓ Weekly strategy calls</li>
+        </ul>
+      </div>
     </div>
   </section>
+ 
+<!-- About -->  
+ <section id="about" class="py-16 bg-gray-100 dark:bg-gray-900">
+  <div class="max-w-4xl mx-auto text-center px-4">
+    <h3 class="text-3xl font-bold mb-4">About Us</h3>
+    <p>We're two passionate marketers who started AdVisit to help small and local businesses grow online. With skills in design, analytics, and content — we deliver real results without big agency prices.</p>
+  </div>
+
+<!-- Contact -->
+<section id="contact" class="py-16 max-w-4xl mx-auto px-4">
+<h3 class="text-3xl font-bold mb-10 text-center">Let's Work Together</h3>
+
+<!-- Founder & Co-Founder Info -->
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+  
+  <!-- Founder -->
+  <div class="flex items-start space-x-4 bg-white p-6 rounded shadow dark:bg-gray-800">
+    <img src="https://via.placeholder.com/80" alt="Founder" class="w-20 h-20 rounded-full object-cover shadow-md">
+    <div>
+      <h4 class="text-lg font-bold text-blue-600">Founder</h4>
+      <p class="font-semibold">Rishi Kumar. S</p>
+      <p class="text-sm">Email: <a href="mailto:srksrishikumar@gmail.com" class="text-blue-500 hover:underline">srksrishikumar@gmail.com</a></p>
+      <p class="text-sm">Phone: <a href="tel:+918428859771" class="text-blue-500 hover:underline">+91 8428859771</a></p>
+    </div>
+  </div>
+
+  <!-- Co-Founder -->
+  <div class="flex items-start space-x-4 bg-white p-6 rounded shadow dark:bg-gray-800">
+    <img src="https://via.placeholder.com/80" alt="Co-Founder" class="w-20 h-20 rounded-full object-cover shadow-md">
+    <div>
+      <h4 class="text-lg font-bold text-blue-600">Co-Founder</h4>
+      <p class="font-semibold">Gokul Nath. K</p>
+      <p class="text-sm">Email: <a href="mailto:gokulnath171998@gmail.com" class="text-blue-500 hover:underline">gokulnath171998@gmail.com</a></p>
+      <p class="text-sm">Phone: <a href="tel:+917448430745" class="text-blue-500 hover:underline">+91 7448430745</a></p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-16 max-w-3xl mx-auto px-4 bg-white rounded shadow">
+  <h3 class="text-3xl font-bold mb-6 text-center">Get In Touch</h3>
+  <div class="w-full overflow-hidden">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-ly6GJrfDjhKB7u3COaPObMWx6xbsXyjiXgcGbqVNYYjzug/viewform?embedded=true" 
+      width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" class="w-full rounded">Loading…</iframe>
+  </div>
+</section>
 
   <!-- WhatsApp Button -->
-  <a href="https://wa.me/919876543210" target="_blank" class="fixed bottom-4 right-4 z-50">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" class="w-14 h-14 rounded-full shadow-lg hover:scale-110 transition" />
-  </a>
+  <a href="https://wa.me/91 8428859771" class="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600" target="_blank">WhatsApp</a>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500 text-sm bg-white border-t mt-10">
-    © 2025 Advisit Digital Marketing. All rights reserved.
+  <footer class="text-center py-6 text-gray-500 text-sm dark:text-gray-400">
+    © 2025 AdVisit. All rights reserved.
   </footer>
 
 </body>
