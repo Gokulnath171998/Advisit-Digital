@@ -5,31 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AdVisit | Digital Marketing Experts</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark');
+  <style>
+    html {
+      scroll-behavior: smooth;
     }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'GA_TRACKING_ID');
-  </script>
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
 
-  <!-- Navbar with Logo -->
+  <!-- Navbar -->
   <header class="bg-white dark:bg-gray-800 shadow">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-2">
-        <!-- Logo: Replace src with your actual logo path -->
-     <img src="New logo.jpg" onerror="this.onerror=null; " alt="AdVisit Logo"
-       class="h-10 w-10 rounded-full">
+        <img src="New logo.jpg" onerror="this.onerror=null;" alt="AdVisit Logo" class="h-10 w-10 rounded-full">
         <h1 class="text-xl font-bold">Ad<span class="text-blue-500">Visit</span></h1>
       </div>
-      <nav class="space-x-4">
+
+      <!-- Mobile toggle -->
+      <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex space-x-4">
         <a href="#services" class="hover:text-blue-500">Services</a>
         <a href="#portfolio" class="hover:text-blue-500">Portfolio</a>
         <a href="#pricing" class="hover:text-blue-500">Pricing</a>
@@ -37,19 +37,28 @@
         <a href="#contact" class="hover:text-blue-500">Contact</a>
       </nav>
     </div>
+
+    <!-- Mobile nav -->
+    <div id="mobile-menu" class="md:hidden px-4 pb-4 hidden">
+      <a href="#services" class="block py-2 hover:text-blue-500">Services</a>
+      <a href="#portfolio" class="block py-2 hover:text-blue-500">Portfolio</a>
+      <a href="#pricing" class="block py-2 hover:text-blue-500">Pricing</a>
+      <a href="#about" class="block py-2 hover:text-blue-500">About</a>
+      <a href="#contact" class="block py-2 hover:text-blue-500">Contact</a>
+    </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="text-center py-20 bg-blue-50 dark:bg-blue-900">
-    <h2 class="text-4xl font-bold mb-4">Grow Your Business Online</h2>
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Grow Your Business Online</h2>
     <p class="mb-6 text-lg">We help small businesses scale through social media, SEO, and paid ads.</p>
     <a href="#contact" class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600">Get Free Consultation</a>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-16 max-w-6xl mx-auto px-4">
+  <section id="services" class="py-16 container mx-auto px-4">
     <h3 class="text-3xl font-bold mb-8 text-center">Our Services</h3>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid gap-8 md:grid-cols-3">
       <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
         <h4 class="font-bold text-xl mb-2">Social Media Marketing</h4>
         <p>Organic & paid strategies to grow on Instagram, Facebook, and LinkedIn.</p>
@@ -65,34 +74,35 @@
     </div>
   </section>
 
-<!-- Portfolio -->
-<section id="portfolio" class="py-16 bg-gray-100 dark:bg-gray-800">
-  <div class="max-w-5xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-8 text-center">Our Projects</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-4 shadow rounded dark:bg-gray-700">
-        <img src="project1.jpg"class="mb-3 rounded w-full h-60 object-cover" alt="Project">
-        <h4 class="font-bold">Instagram Growth for Hair oil</h4>
-        <p class="text-sm">Increased followers by 200% and sales by 30% in 60 days.</p>
-      </div>
-      <div class="bg-white p-4 shadow rounded dark:bg-gray-700">
-        <img src="project2.avif"class="mb-3 rounded w-full h-60 object-cover" alt="Project">
-        <h4 class="font-bold">SEO for E-commerce</h4>
-        <p class="text-sm">Boosted organic traffic by 40% and ranked on first page.</p>
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-16 bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-8 text-center">Our Projects</h3>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="bg-white p-4 shadow rounded dark:bg-gray-700">
+          <img src="project1.jpg" class="mb-3 rounded w-full h-60 object-cover" alt="Project 1">
+          <h4 class="font-bold">Instagram Growth for Hair oil</h4>
+          <p class="text-sm">Increased followers by 200% and sales by 30% in 60 days.</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded dark:bg-gray-700">
+          <img src="project2.avif" class="mb-3 rounded w-full h-60 object-cover" alt="Project 2">
+          <h4 class="font-bold">SEO for E-commerce</h4>
+          <p class="text-sm">Boosted organic traffic by 40% and ranked on first page.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Pricing -->
-  <section id="pricing" class="py-16 max-w-6xl mx-auto px-4">
+  <section id="pricing" class="py-16 container mx-auto px-4">
     <h3 class="text-3xl font-bold mb-8 text-center">Pricing</h3>
-    <div class="grid md:grid-cols-3 gap-8 text-center">
+    <div class="grid gap-8 md:grid-cols-3 text-center">
+      <!-- Starter Plan -->
       <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
         <h4 class="font-bold text-xl mb-2">Starter</h4>
         <p class="text-2xl font-bold mb-4">₹2,999/mo</p>
-         <p> Perfect for small businesses just getting started.</p>
-        <ul class="space-y-2 text-sm">
+        <p>Perfect for small businesses just getting started.</p>
+        <ul class="space-y-2 text-sm mt-4">
           <li>✓ 3 posts/week</li>
           <li>✓ 1 ad campaign</li>
           <li>✓ Monthly Performance Report</li>
@@ -100,108 +110,97 @@
           <li>✓ Caption Copywriting</li>
           <li>✓ Profile Optimization</li>
           <li>✓ Basic Growth Tips</li>
-        
         </ul>
       </div>
+      <!-- Growth Plan -->
       <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
         <h4 class="font-bold text-xl mb-2">Growth</h4>
         <p class="text-2xl font-bold mb-4">₹6,999/mo</p>
-        <p> Ideal for growing brands wanting
-better reach & visibility.</p>
-        <ul class="space-y-2 text-sm">
+        <p>Ideal for growing brands wanting better reach & visibility.</p>
+        <ul class="space-y-2 text-sm mt-4">
           <li>✓ 5 posts/week</li>
           <li>✓ 2 ad campaigns</li>
           <li>✓ SEO audit</li>
           <li>✓ Engagement Boost Strategy</li>
-          <li>✓ Facebook & Instagram Story Designs</li>
-          <li>✓ Highlight Cover Design</li>
-          <li>✓ Audience Insights + Monthly Growth Plan</li>
+          <li>✓ Story Designs & Highlight Covers</li>
+          <li>✓ Monthly Growth Plan</li>
           <li>✓ Chat Support (Mon–Fri)</li>
         </ul>
       </div>
+      <!-- Pro Plan -->
       <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
         <h4 class="font-bold text-xl mb-2">Pro</h4>
         <p class="text-2xl font-bold mb-4">₹11,999/mo</p>
-        <p> For serious businesses looking to
-scale & dominate online.</p>
-        <ul class="space-y-2 text-sm">
+        <p>For serious businesses looking to scale & dominate online.</p>
+        <ul class="space-y-2 text-sm mt-4">
           <li>✓ Everything in Growth</li>
           <li>✓ Website + Email Marketing</li>
-          <li>✓ Weekly strategy calls</li>
-           <li>✓ Custom Landing Page Design Suggestions</li>
-           <li>✓ Competitor Analysis Report</li>
-           <li>✓ Advanced Lead Funnel Setup Guide</li>
-           <li>✓ Retargeting Strategy & Setup</li>
-           <li>✓ WhatsApp Marketing Plan</li>
-           <li>✓ Priority Support</li>
+          <li>✓ Strategy Calls & Funnel Setup</li>
+          <li>✓ Landing Page & Retargeting</li>
+          <li>✓ WhatsApp Marketing Plan</li>
+          <li>✓ Priority Support</li>
         </ul>
       </div>
     </div>
   </section>
- 
-<!-- About -->  
- <section id="about" class="py-16 bg-gray-100 dark:bg-gray-900">
-  <div class="max-w-4xl mx-auto text-center px-4">
-    <h3 class="text-3xl font-bold mb-4">About Us</h3>
-    <p>We're two passionate marketers who started AdVisit to help small and local businesses grow online. With skills in design, analytics, and content — we deliver real results without big agency prices.</p>
-  </div>
 
-<!-- Contact -->
-<section id="contact" class="py-16 max-w-4xl mx-auto px-4">
-<h3 class="text-3xl font-bold mb-10 text-center">Let's Work Together</h3>
-
-<div class="grid md:grid-cols-2 gap-8 mb-12">
-  <!-- ADTech Specialist -->
-  <div class="flex items-start space-x-4 bg-white p-6 rounded shadow dark:bg-gray-800">
-    <img src="fonder.jpg" alt="AD Tech" class="w-20 h-20 rounded-full object-cover shadow-md">
-    <div>
-      <h4 class="text-lg font-bold text-blue-600">ADTech Specialist</h4>
-      <p class="font-semibold">Rishi Kumar. S</p>
-      <p class="text-sm">Email: <a href="mailto:srksrishikumar@gmail.com" class="text-blue-500 hover:underline">srksrishikumar@gmail.com</a></p>
-      <p class="text-sm">Phone: <a href="tel:+918428859771" class="text-blue-500 hover:underline">+91 84288 59771</a></p>
+  <!-- About -->
+  <section id="about" class="py-16 bg-gray-100 dark:bg-gray-900">
+    <div class="container mx-auto text-center px-4">
+      <h3 class="text-3xl font-bold mb-4">About Us</h3>
+      <p>We're two passionate marketers who started AdVisit to help small and local businesses grow online. With skills in design, analytics, and content — we deliver real results without big agency prices.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- SMM -->
-  <div class="flex items-start space-x-4 bg-white p-6 rounded shadow dark:bg-gray-800">
-    <img src="1659077945620.jpeg" alt="SEO" class="w-20 h-20 rounded-full object-cover shadow-md">
-    <div>
-      <h4 class="text-lg font-bold text-blue-600">SMM specialist</h4>
-      <p class="font-semibold">Gokul Nath. K</p>
-      <p class="text-sm">Email: <a href="mailto:gokulnath171998@gmail.com" class="text-blue-500 hover:underline">gokulnath171998@gmail.com</a></p>
-      <p class="text-sm">Phone: <a href="tel:+917448430745" class="text-blue-500 hover:underline">+91 74484 30745</a></p>
+  <!-- Contact Team -->
+  <section id="contact" class="py-16 container mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-10 text-center">Let's Work Together</h3>
+    <div class="grid gap-8 md:grid-cols-2">
+      <!-- Member Cards -->
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800 flex items-start space-x-4">
+        <img src="fonder.jpg" alt="AD Tech" class="w-20 h-20 rounded-full object-cover shadow-md">
+        <div>
+          <h4 class="text-lg font-bold text-blue-600">ADTech Specialist</h4>
+          <p class="font-semibold">Rishi Kumar. S</p>
+          <p class="text-sm">Email: <a href="mailto:srksrishikumar@gmail.com" class="text-blue-500 hover:underline">srksrishikumar@gmail.com</a></p>
+          <p class="text-sm">Phone: <a href="tel:+918428859771" class="text-blue-500 hover:underline">+91 84288 59771</a></p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800 flex items-start space-x-4">
+        <img src="1659077945620.jpeg" alt="SMM" class="w-20 h-20 rounded-full object-cover shadow-md">
+        <div>
+          <h4 class="text-lg font-bold text-blue-600">SMM Specialist</h4>
+          <p class="font-semibold">Gokul Nath. K</p>
+          <p class="text-sm">Email: <a href="mailto:gokulnath171998@gmail.com" class="text-blue-500 hover:underline">gokulnath171998@gmail.com</a></p>
+          <p class="text-sm">Phone: <a href="tel:+917448430745" class="text-blue-500 hover:underline">+91 74484 30745</a></p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-<!-- Graphic Designer -->
-<div class="grid md:grid-cols-2 gap-8 mb-12">
-  <div class="flex items-start space-x-4 bg-white p-6 rounded shadow dark:bg-gray-800">
-    <img src="Designer image.jpg" alt="Designing & Graphic" class="w-20 h-20 rounded-full object-cover shadow-md">
-    <div>
-      <h4 class="text-lg font-bold text-blue-600"> Graphic Designer</h4>
-      <p class="font-semibold">Arun Kumar. A</p>
-      <p class="text-sm">Email: <a href="mailto:arunkumar@example.com" class="text-blue-500 hover:underline">arunkumar@example.com</a></p>
-      <p class="text-sm">Phone: <a href="tel:+911234567890" class="text-blue-500 hover:underline">+91 12345 67890</a></p>
+    <!-- Graphic Designer -->
+    <div class="mt-10 bg-white p-6 rounded shadow dark:bg-gray-800 flex items-start space-x-4 max-w-md mx-auto">
+      <img src="Designer image.jpg" alt="Designer" class="w-20 h-20 rounded-full object-cover shadow-md">
+      <div>
+        <h4 class="text-lg font-bold text-blue-600">Graphic Designer</h4>
+        <p class="font-semibold">Arun Kumar. A</p>
+        <p class="text-sm">Email: <a href="mailto:arunkumar@example.com" class="text-blue-500 hover:underline">arunkumar@example.com</a></p>
+        <p class="text-sm">Phone: <a href="tel:+911234567890" class="text-blue-500 hover:underline">+91 12345 67890</a></p>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
+  <!-- Contact Form -->
+  <section class="py-16 container mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-6 text-center">Get In Touch</h3>
+    <div class="overflow-x-auto">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-ly6GJrfDjhKB7u3COaPObMWx6xbsXyjiXgcGbqVNYYjzug/viewform?embedded=true"
+        width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" class="w-full rounded">Loading…</iframe>
+    </div>
+  </section>
 
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-16 max-w-3xl mx-auto px-4 bg-white rounded shadow">
-  <h3 class="text-3xl font-bold mb-6 text-center">Get In Touch</h3>
-  <div class="w-full overflow-hidden">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-ly6GJrfDjhKB7u3COaPObMWx6xbsXyjiXgcGbqVNYYjzug/viewform?embedded=true" 
-      width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" class="w-full rounded">Loading…</iframe>
-  </div>
-</section>
-
-  <!-- WhatsApp Button -->
+  <!-- WhatsApp -->
   <a href="https://wa.me/918428859771" class="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600" target="_blank">WhatsApp</a>
 
+  <!-- Footer -->
   <footer class="text-center py-6 text-gray-500 text-sm dark:text-gray-400">
     © 2025 AdVisit. All rights reserved.
   </footer>
