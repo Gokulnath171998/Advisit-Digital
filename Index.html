@@ -10,6 +10,15 @@
       scroll-behavior: smooth;
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-97TQC3N1QB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-97TQC3N1QB');
+</script>
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
 
@@ -17,14 +26,18 @@
   <header class="bg-white dark:bg-gray-800 shadow">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-2">
-        <img src="New logo.jpg" alt="AdVisit Logo" class="h-10 w-10 rounded-full object-cover">
+        <img src="New logo.jpg" onerror="this.onerror=null;" alt="AdVisit Logo" class="h-10 w-10 rounded-full">
         <h1 class="text-xl font-bold">Ad<span class="text-blue-500">Visit</span></h1>
       </div>
+
+      <!-- Mobile toggle -->
       <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
         </svg>
       </button>
+
+      <!-- Desktop nav -->
       <nav class="hidden md:flex space-x-4">
         <a href="#services" class="hover:text-blue-500">Services</a>
         <a href="#portfolio" class="hover:text-blue-500">Portfolio</a>
@@ -33,6 +46,8 @@
         <a href="#contact" class="hover:text-blue-500">Contact</a>
       </nav>
     </div>
+
+    <!-- Mobile nav -->
     <div id="mobile-menu" class="md:hidden px-4 pb-4 hidden">
       <a href="#services" class="block py-2 hover:text-blue-500">Services</a>
       <a href="#portfolio" class="block py-2 hover:text-blue-500">Portfolio</a>
@@ -41,10 +56,15 @@
       <a href="#contact" class="block py-2 hover:text-blue-500">Contact</a>
     </div>
   </header>
-
   <!-- Hero Banner Image -->
   <section class="w-full">
     <img src="banner .jpg" alt="AdVisit Banner" class="w-full h-auto sm:h-[400px] object-cover">
+  </section>
+  <!-- Hero -->
+  <section class="text-center py-20 bg-blue-50 dark:bg-blue-900">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Grow Your Business Online</h2>
+    <p class="mb-6 text-lg">We help small businesses scale through social media, SEO, and paid ads.</p>
+    <a href="#contact" class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600">Get Free Consultation</a>
   </section>
 
   <!-- Services -->
@@ -89,7 +109,50 @@
   <section id="pricing" class="py-16 container mx-auto px-4">
     <h3 class="text-3xl font-bold mb-8 text-center">Pricing</h3>
     <div class="grid gap-8 md:grid-cols-3 text-center">
-      <!-- Plan Cards Here (same as before) -->
+      <!-- Starter Plan -->
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">Starter</h4>
+        <p class="text-2xl font-bold mb-4">₹3,999/mo</p>
+        <p>Perfect for small businesses just getting started.</p>
+        <ul class="space-y-2 text-sm mt-4">
+          <li>✓ 3 posts/week</li>
+          <li>✓ 1 ad campaign</li>
+          <li>✓ Monthly Performance Report</li>
+          <li>✓ Basic Hashtag Research</li>
+          <li>✓ Caption Copywriting</li>
+          <li>✓ Profile Optimization</li>
+          <li>✓ Basic Growth Tips</li>
+        </ul>
+      </div>
+      <!-- Growth Plan -->
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">Growth</h4>
+        <p class="text-2xl font-bold mb-4">₹6,999/mo</p>
+        <p>Ideal for growing brands wanting better reach & visibility.</p>
+        <ul class="space-y-2 text-sm mt-4">
+          <li>✓ 5 posts/week</li>
+          <li>✓ 2 ad campaigns</li>
+          <li>✓ SEO audit</li>
+          <li>✓ Engagement Boost Strategy</li>
+          <li>✓ Story Designs & Highlight Covers</li>
+          <li>✓ Monthly Growth Plan</li>
+          <li>✓ Chat Support (Mon–Fri)</li>
+        </ul>
+      </div>
+      <!-- Pro Plan -->
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
+        <h4 class="font-bold text-xl mb-2">Pro</h4>
+        <p class="text-2xl font-bold mb-4">₹11,999/mo</p>
+        <p>For serious businesses looking to scale & dominate online.</p>
+        <ul class="space-y-2 text-sm mt-4">
+          <li>✓ Everything in Growth</li>
+          <li>✓ Website + Email Marketing</li>
+          <li>✓ Strategy Calls & Funnel Setup</li>
+          <li>✓ Landing Page & Retargeting</li>
+          <li>✓ WhatsApp Marketing Plan</li>
+          <li>✓ Priority Support</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -105,18 +168,42 @@
   <section id="contact" class="py-16 container mx-auto px-4">
     <h3 class="text-3xl font-bold mb-10 text-center">Let's Work Together</h3>
     <div class="grid gap-8 md:grid-cols-2">
-      <!-- Team Members (same as your original code) -->
+      <!-- Member Cards -->
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800 flex items-start space-x-4">
+        <img src="fonder.jpg" alt="AD Tech" class="w-20 h-20 rounded-full object-cover shadow-md">
+        <div>
+          <h4 class="text-lg font-bold text-blue-600">ADTech Specialist</h4>
+          <p class="font-semibold">Rishi Kumar. S</p>
+            <!--
+          <p class="text-sm">Email: <a href="mailto:srksrishikumar@gmail.com" class="text-blue-500 hover:underline">srksrishikumar@gmail.com</a></p>
+          <p class="text-sm">Phone: <a href="tel:+918428859771" class="text-blue-500 hover:underline">+91 84288 59771</a></p>
+          -->
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded shadow dark:bg-gray-800 flex items-start space-x-4">
+        <img src="1659077945620.jpeg" alt="SMM" class="w-20 h-20 rounded-full object-cover shadow-md">
+        <div>
+          <h4 class="text-lg font-bold text-blue-600">SMM Specialist</h4>
+          <p class="font-semibold">Gokul Nath. K</p>
+          <!--
+          <p class="text-sm">Email: <a href="mailto:gokulnath171998@gmail.com" class="text-blue-500 hover:underline">gokulnath171998@gmail.com</a></p>
+          <p class="text-sm">Phone: <a href="tel:+917448430745" class="text-blue-500 hover:underline">+91 74484 30745</a></p> -->
+        </div>
+      </div>
     </div>
+    <!-- Graphic Designer -->
     <div class="mt-10 bg-white p-6 rounded shadow dark:bg-gray-800 flex items-start space-x-4 max-w-md mx-auto">
       <img src="Designer image.jpg" alt="Designer" class="w-20 h-20 rounded-full object-cover shadow-md">
       <div>
         <h4 class="text-lg font-bold text-blue-600">Graphic Designer</h4>
         <p class="font-semibold">Arun Kumar. A</p>
+        <!--
+        <p class="text-sm">Email: <a href="mailto:arunkumar@example.com" class="text-blue-500 hover:underline">arunkumar@example.com</a></p>
+        <p class="text-sm">Phone: <a href="tel:+911234567890" class="text-blue-500 hover:underline">+91 12345 67890</a></p>
+        -->
       </div>
     </div>
   </section>
-
- 
 
   <!-- Contact Form -->
   <section class="py-16 container mx-auto px-4">
@@ -131,7 +218,8 @@
   <a href="https://wa.me/918428859771" class="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600" target="_blank">WhatsApp</a>
 
   <!-- Footer -->
-   <!-- Footer Image -->
+
+     <!-- Footer Image -->
   <section class="w-full mt-10">
     <img src="footer.jpg" alt="AdVisit Footer" class="w-full h-auto sm:h-[400px] object-cover">
   </section>
